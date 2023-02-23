@@ -12,6 +12,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="style.css" />
     <title>Citra Portoflio</title>
   </head>
@@ -56,7 +58,7 @@
     <section class="jumbotron text-center">
       <img src="img/profile.jpeg" alt="profile" width="100" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Rizky Mutiara Citra Ayuti</h1>
-      <p class="lead">Universitas Negeri Surabaya | Pendidikan Teknologi Informasi</p>
+      <p class="lead"></p>
       <a class="btn btn-outline-danger" href="#about" role="button">More About Citra</a>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -75,7 +77,7 @@
           </div>
         </div>
         <div class="row fs-5">
-          <div class="col-md-3 mb-5">
+          <div class="col-md-3 mb-5" data-aos="fade-right" data-aos-duration="1000">
             <div class="card text-center">
               <img src="img/foto.JPG" class="card-img-top" alt="about" />
               <div class="card-body">
@@ -83,7 +85,7 @@
               </div>
             </div>
           </div>
-          <div class="col text-center">
+          <div class="col text-center" data-aos="flip-up" data-aos-delay="200">
             <p>
               Mahasiswa dari kampus Universitas Negeri Surabaya, jurusan Teknik Informatika. Merupakan pribadi yang kreatif, memiliki jiwa kepimimpinan yang tinggi, dapat bekerja dalam tim, dan mudah beradaptasi dengan hal baru. Selama
               kuliah memiliki pengalaman dalam dalam mengerjakan project untuk membuat aplikasi android menggunakan Android Studio, membuat website dengan HTML,CSS,PHP membuat game dekstop menggunakan Unity 2D, dan membuat desain UI/UX
@@ -91,7 +93,7 @@
             </p>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="fade-left" data-aos-duration="1000">
             <div class="card" style="width: 18rem">
               <div class="card-body text-center">
                 <h3 class="card-title text-center">Sosial Media</h3>
@@ -166,7 +168,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up" data-aos-duration="500">
               <img src="img/p1.jpg" class="card-img-top" alt="project 1" />
               <div class="card-body">
                 <p class="card-text text-center">Design UI/UX website Doman sebuah website donasi mendapat juara harapan 1</p>
@@ -174,7 +176,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="100">
               <img src="img/p2.png" class="card-img-top" alt="project 2" />
               <div class="card-body">
                 <p class="card-text text-center">Aplikasi game dekstop untuk pembelajaran yang dibuat menggunakan unity 2D</p>
@@ -182,7 +184,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="150">
               <img src="img/p3.png" class="card-img-top" alt="project 3" />
               <div class="card-body">
                 <p class="card-text text-center">Design UI/UX mobile GIMIK yang mengusut UMKM berhasil Mendapat Juara 3</p>
@@ -280,5 +282,20 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Universitas Negeri Surabaya | Pendidikan Teknologi Informasi" });
+      gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
   </body>
 </html>
